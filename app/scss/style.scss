@@ -5,6 +5,7 @@
                       @import 'global';
                       .article {
                           margin-top: 96px;
+                          z-index: 5;
                           &__inner {
                               display: flex;
                               align-items: center;
@@ -25,7 +26,20 @@
                               border-radius: 32px;
                               background-color: #E4C1AE;
                               border: none;
+                              cursor: pointer;
                               @extend%Roboto-700;
+                          }
+                      }
+                      
+                      .window {
+                          max-width: 730px;
+                          margin: auto;
+                          z-index: 20;
+                          background-color: #fff;
+                          &__inner {
+                              display: flex;
+                              justify-content: space-between;
+                              padding: 56px 40px 56px 95px;
                           }
                       }
                       
