@@ -3,4 +3,30 @@
                       @import 'reset';
                       @import 'libs';
                       @import 'global';
+                      .article {
+                          margin-top: 96px;
+                          &__inner {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                          }
+                          &__img {
+                              margin-right: 95px;
+                          }
+                          &__text-paragraph {
+                              max-width: 380px;
+                              margin-bottom: 19px;
+                          }
+                          &__text-btn {
+                              padding: 16px 40px;
+                              font-size: 16px;
+                              line-height: 100%;
+                              color: #fff;
+                              border-radius: 32px;
+                              background-color: #E4C1AE;
+                              border: none;
+                              @extend%Roboto-700;
+                          }
+                      }
+                      
                       @import 'media';
