@@ -1,8 +1,12 @@
 $(function() {
 
     $("body").on("click", "#submit", function() {
-        $(".article, .window, .body").toggleClass("active");
+        $(".article, .window, .inner").toggleClass("active");
     });
+
+
+
+
 
 
 });

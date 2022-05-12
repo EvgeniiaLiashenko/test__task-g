@@ -3,9 +3,25 @@
                       @import 'reset';
                       @import 'libs';
                       @import 'global';
+                      .inner {
+                          position: relative;
+                      }
+                      
+                      .inner.active::after {
+                          content: "";
+                          position: absolute;
+                          background-color: #121212;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          opacity: 0.6;
+                          height: 100%;
+                          z-index: 15;
+                          height: 100vh;
+                      }
+                      
                       .article {
-                          margin-top: 96px;
-                          z-index: 5;
+                          padding-top: 96px;
                           &__inner {
                               display: flex;
                               align-items: center;
@@ -13,6 +29,7 @@
                           }
                           &__img {
                               margin-right: 95px;
+                              display: inline-block;
                           }
                           &__text-paragraph {
                               max-width: 380px;
@@ -36,11 +53,29 @@
                           margin: auto;
                           z-index: 20;
                           background-color: #fff;
+                          position: fixed;
+                          top: - 100%;
                           &__inner {
                               display: flex;
                               justify-content: space-between;
                               padding: 56px 40px 56px 95px;
                           }
+                          &__title {
+                              font-size: 42px;
+                              line-height: 120%;
+                              @extend%Roboto-700;
+                              margin-bottom: 24px;
+                          }
+                          &__text {
+                              font-size: 16px;
+                              line-height: 150%;
+                              @extend%Roboto-300;
+                          }
+                      }
+                      
+                      .window.active {
+                          position: relative;
+                          top: -100px;
                       }
                       
                       @import 'media';
